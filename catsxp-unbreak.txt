@@ -8,9 +8,12 @@
 @@||ads.catsxp.software^$first-party
 @@||ads-admin.catsxpsoftware.com^$first-party
 @@||ads.catsxpsoftware.com^$first-party
+@@||search.catsxp.com/api/$first-party
 @@||ads-admin.catsxp.com^$first-party
 @@||ads-admin.catsxp.software^$first-party
 @@||ads.catsxp.com^$first-party
+! https://github.com/uBlockOrigin/uAssets/blob/master/filters/privacy.txt#L260
+search.catsxp.com#@#+js(no-fetch-if, body:cohort)
 ! stats.catsxp.com
 stats.catsxp.com#@#adsContent
 @@||stats.catsxp.com/local/img/publisher-icons/$domain=stats.catsxp.com
@@ -221,7 +224,7 @@ livemint.com##+js(aeld, DOMContentLoaded)
 uptostream.com,tirexo.lol##+js(acis, window.a)
 @@||tirexo.lol^$generichide
 ! portscanning script
-sciencedirect.com,ebay.com,ebay-kleinanzeigen.de,tdbank.com##+js(acis, tmx_post_session_params_fixed)
+cibc.com,sciencedirect.com,ebay.com,ebay-kleinanzeigen.de,tdbank.com##+js(acis, tmx_post_session_params_fixed)
 ! megaup.net
 megaup.net#@#.adBanner
 ! slate.com Anti-adblock workaround https://github.com/catsxp/catsxp-browser/issues/15702
