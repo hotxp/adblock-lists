@@ -311,7 +311,7 @@ archive.is,btdig.com,archive.today,archive.vn,archive.fo,archive.md,archive.li,a
 ! Anti-Catsxp checks (jaysndees.com)
 jaysndees.com##+js(acis, detectBBrowser)
 ! Anti-Catsxp checks (bellasephina.com/tecknity.com/ebook-searcher.com)
-texas-time-gifts.com,attleer.top,2gilberta.top,rwillk.top,i-rotary.com,ach-photos.com,bellasephina.com,tecknity.com,ebook-searcher.com##+js(acis, request)
+mynewsmedia.co,texas-time-gifts.com,attleer.top,2gilberta.top,rwillk.top,i-rotary.com,ach-photos.com,bellasephina.com,tecknity.com,ebook-searcher.com##+js(acis, request)
 ! Anti-Catsxp checks (uploadbank.com)
 ||uploadbank.com/js/checkcatsxp.js
 uploadbank.com##+js(set, XMLHttpRequest, noopFunc)
