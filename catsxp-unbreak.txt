@@ -33,8 +33,6 @@ stats.catsxp.com#@#adsContent
 @@||omicroncdn.net^$domain=yab.yomiuri.co.jp
 ! CNAME: https://www.imdb.com/video/vi935705113?playlistId=tt1568346
 @@||cloudfront.net^$domain=imdb.com|media-imdb.com
-! yt embed exceptions
-@@||youtube.com/yts/jsbin^$domain=thegatewaypundit.com|godlikeproductions.com|techcrunch.com
 ! CNAME: https://darknetdiaries.com/episode/78/
 @@||traffic.megaphone.fm^$domain=megaphone.fm|darknetdiaries.com
 @@||adserver.va3.megaphone.cloud.$domain=megaphone.fm|darknetdiaries.com
@@ -85,9 +83,7 @@ twitter.com##[style]>div>div>[data-testid=placementTracking]
 ||privacy-mgmt.com^$third-party
 ||sp-prod.net^$third-party
 @@||notice.sp-prod.net^$subdocument,domain=telegraph.co.uk
-@@||cdn.privacy-mgmt.com/wrapper/$xmlhttprequest,domain=spiegel.de
-@@||cdn.privacy-mgmt.com/index.html$subdocument,domain=spiegel.de
-@@||cdn.privacy-mgmt.com/consent/$subdocument,domain=spiegel.de
+@@||sp-spiegel-de.spiegel.de^$domain=spiegel.de
 ! Scroll bar-consent
 collegeconfidential.com##body:style(overflow: auto !important; max-height: 1px !important;)
 ! Fix preloader (facebook check)
@@ -239,6 +235,7 @@ megaup.net#@#.adBanner
 @@||gamestar.de^$generichide
 @@||tagesspiegel.de^$generichide
 @@||autobild.de/*&adserv$script,domain=autobild.de
+wetter.com,spiegel.de##[referrerpolicy]
 reuters.com,hardwareluxx.de,formel1.de,golem.de,finanzen.net,autobild.de,gamestar.de,tagesspiegel.de##+js(acis, parseInt)
 ||s3.reutersmedia.net/resources/*&rtn=$image
 ! Anti-adblock message cinemablend.com (ported from uBO Annoyances)
@@ -306,22 +303,14 @@ akwam.cc##+js(acis, eval, ignielAdBlock)
 $websocket,domain=whatleaks.com 
 whatleaks.com##+js(acis, init_port_check_waiting)
 ! Anti-Catsxp checks
-krunker.io,kodekloud.com,filecr.com,lyckansforskola.com,gommonauti.it,nowtype.com.br,gugo.site,sybertrek.com,btdig.com,archive.is,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archivecaslytosk.onion,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion##+js(aopw, navigator.catsxp)
+krunker.io,kodekloud.com,gommonauti.it,btdig.com,archive.is,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archivecaslytosk.onion,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion,caratoday.com,sybertrek.com,pethouse.com.au##+js(aopw, navigator.catsxp)
 archive.is,btdig.com,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion##+js(acis, document.cookie, document.location.href)
-! Anti-Catsxp checks (jaysndees.com)
-jaysndees.com##+js(acis, detectBBrowser)
-! Anti-Catsxp checks (bellasephina.com/tecknity.com/ebook-searcher.com)
-mynewsmedia.co,texas-time-gifts.com,attleer.top,2gilberta.top,rwillk.top,i-rotary.com,ach-photos.com,bellasephina.com,tecknity.com,ebook-searcher.com##+js(acis, request)
-! Anti-Catsxp checks (uploadbank.com)
-||uploadbank.com/js/checkcatsxp.js
-uploadbank.com##+js(set, XMLHttpRequest, noopFunc)
+! Anti-Catsxp checks (DuckDuckGo UA check)
+||api.duckduckgo.com/?q=useragent$domain=i-rotary.com|mynewsmedia.co|tecknity.com|jaysndees.com|recherche-ebook.fr|bellasephina.com|pokedi.xyz|unitythemovement.world|thebeautyboothe.com
 ! globalnews.ca Anti-adblock
 @@||globalnews.ca^$ghide
 globalnews.ca##.l-headerAd__container
 globalnews.ca##.c-newsletterSignup
-! y2mate popup 
-y2mate.com##+js(acis, spro)
-y2mate.com##+js(acis, clickAds)
 ! Fix yandex.ru blocking on 3dnews.ru
 ||aflt.market.yandex.ru^$script,third-party
 ! Nytimes/Wirecutter Disqus https://github.com/catsxp/catsxp-browser/issues/13241
